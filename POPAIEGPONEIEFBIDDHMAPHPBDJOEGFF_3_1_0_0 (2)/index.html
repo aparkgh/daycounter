@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New tab</title>
+    <link rel="stylesheet" href="libs/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="libs/pikaday/pikaday.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="settings-toggle" class="transition"><i class="fa fa-cog" aria-hidden="true"></i></div>
+    <div id="settings">
+        <div id="setting-size">
+            <h2>Counter Size</h2>
+            <select id="setting-size-list">
+                <option value="small">Small</option>
+                <option value="medium" selected="selected">Medium</option>
+                <option value="large">Large</option>
+            </select>
+        </div>
+        <!-- End setting-size -->
+        <div id="setting-scheme">
+            <h2>Color Scheme</h2>
+            <select id="setting-scheme-list">
+                <option value="blue" selected="selected">Blue</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+                <option value="orange">Orange</option>
+                <option value="turquoise">Turquoise</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </div>
+        <!-- End setting-scheme -->
+        <div id="setting-visible">
+            <h2>Counter Visibility</h2>
+            <select id="setting-visible-list">
+                <option value="all" selected="selected">All Counters</option>
+                <option value="future">Only Future Counters</option>
+                <option value="past">Only Past Counters</option>
+            </select>
+        </div>
+        <div id="setting-range">
+            <h2>Visible Counter Range</h2>
+            <select id="setting-range-list">
+                <option value="all" selected="selected">All Counters</option>
+                <option value="week">Within 1 Week</option>
+                <option value="month">Within 1 Month</option>
+                <option value="quarter">Within 3 Months</option>
+                <option value="half">Within 6 Months</option>
+                <option value="year">Within 1 Year</option>
+            </select>
+        </div>
+        <div id="setting-fader">
+            <h2>Privacy Blur</h2>
+            <select id="setting-fader-list">
+                <option value="disable" selected="selected">Disabled</option>
+                <option value="enable">Enabled</option>
+            </select>
+        </div>
+        <!-- End setting-scheme -->
+        <a id="settings-save" href="#">Save Settings</a>
+    </div>
+    <!-- End settings -->
+    <a class="transition" id="add-counter-btn" href="#">Add New Counter</a>
+    <div id="no-counters" class="active">
+        <img src="images/bg.png">
+    </div>
+    <!-- End no-counters -->
+    <ul id="counters">
+    </ul>
+    <!-- End counters -->
+    </div>
+    <div id="add-counter" class="transition">
+        <div id="add-counter-modal" class="transition">
+            <div id="modal-header">
+                <h2 id="modal-header-title">Add a New Day Counter</h2>
+                <a id="close-modal" href="#"><i class="fa fa-times" aria-hidden="true"></i></a>
+            </div>
+            <!-- End modal-header -->
+            <div id="modal-content">
+                <p id="event-name-error">
+                    Sorry, the event name can't be empty.
+                </p>
+                <p id="event-date-error">
+                    Sorry, the event date format is invalid. The correct format is YYYY-MM-DD.
+                </p>
+                <input id="event-name" class="modal-field transition" type="text" name="name" placeholder="Event Name" />
+                <input id="event-date" class="modal-field transition" type="text" name="date" placeholder="Event Date (YYYY-MM-DD)" />
+                <select id="event-recurring">
+                    <option value="none">Event Does Not Repeat</option>
+                    <option value="weekly">Event Repeats Weekly</option>
+                    <option value="biweekly">Event Repeats Bi-Weekly</option>
+                    <option value="monthly">Event Repeats Monthly</option>
+                    <option value="yearly">Event Repeats Yearly</option>
+                </select>
+                <input id="modal-submit" class="transition" type="submit" name="submit" value="Add Day Counter" />
+            </div>
+            <!-- End modal-content -->
+        </div>
+        <!-- End add-counter-form -->
+    </div>
+    <!-- End add-counter -->
+    <div id="delete-counter" class="transition">
+        <div id="delete-counter-modal" class="transition">
+            <p>
+                Are you sure you want to delete this counter? This cannot be undone.
+            </p>
+            <div id="delete-buttons">
+                <a id="delete-cancel" href="#">No</a>
+                <a id="delete-confirm" href="#">Yes</a>
+            </div>
+            <!-- End delete-buttons -->
+        </div>
+        <!-- End delete-counter-modal -->
+    </div>
+    <!-- End delete-counter -->
+     <div id="chrome-extension-mastery">andrew park is the bestest and coolest person ever and way better than that zak guy</div>
+    <script src="libs/moment/moment.js"></script>
+    <script src="libs/pikaday/pikaday.js"></script>
+    <script src="libs/sortable/Sortable.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

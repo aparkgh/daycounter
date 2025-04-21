@@ -1,0 +1,609 @@
+/* --- Main Styles --- */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: sans-serif;
+  background-color: #3498db; }
+
+html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+body {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto; }
+
+body.active {
+  overflow: hidden; }
+
+.transition {
+  -webkit-transition: 0.5s ease all;
+  transition: 0.5s ease all; }
+
+/* --- Main Title --- */
+#no-counters {
+  display: none;
+  padding: 15px;
+  text-align: center; }
+  #no-counters img {
+    max-width: 100%; }
+  #no-counters.active {
+    display: block; }
+
+#add-counter-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 15px;
+  font-weight: bold;
+  border: 3px solid #fff; }
+  #add-counter-btn:hover {
+    background: #fff;
+    color: #3498db; }
+
+/* --- Counter --- */
+#counters {
+  text-align: center;
+  padding: 60px 15px;
+  margin: 0 auto;
+  max-width: 1100px;
+  -webkit-transition: 0.5s ease opacity;
+  transition: 0.5s ease opacity; }
+  #counters.small .counter {
+    width: 200px; }
+  #counters.large .counter {
+    width: 400px; }
+  #counters.faded {
+    opacity: 0.35;
+    -webkit-filter: blur(5px);
+            filter: blur(5px); }
+
+.counter {
+  position: relative;
+  cursor: move;
+  width: 300px;
+  margin: 15px;
+  padding: 35px 15px;
+  display: inline-block;
+  background: #fff;
+  vertical-align: top;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all; }
+  .counter h3 {
+    font-size: 16px;
+    margin: 0;
+    color: #303244; }
+  .counter p {
+    margin: 0;
+    color: #303244; }
+  .counter:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+    .counter:hover .counter-edit {
+      padding: 5px 0;
+      height: 20px; }
+    .counter:hover .counter-delete {
+      display: block; }
+  .counter.disabled, .counter.invisible {
+    display: none; }
+
+.event-days {
+  font-size: 50px;
+  font-weight: bold;
+  color: #303244; }
+
+.event-date {
+  font-size: 12px; }
+
+.counter-delete {
+  position: absolute;
+  display: none;
+  top: 5px;
+  right: 8px;
+  font-size: 17px;
+  color: #9c9c9c; }
+  .counter-delete:hover {
+    color: #3498db; }
+
+.counter-edit {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0a446b;
+  color: #ffffff;
+  overflow: hidden;
+  height: 0;
+  font-size: 14px;
+  text-decoration: none;
+  display: block; }
+
+/* --- Add Counter --- */
+#add-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 50px 15px 15px 15px;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: -1; }
+  #add-counter.active {
+    opacity: 1;
+    z-index: 99999; }
+    #add-counter.active #add-counter-modal {
+      top: 0;
+      opacity: 1; }
+    #add-counter.active #modal-content {
+      display: block; }
+
+#add-counter-modal {
+  max-width: 500px;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+  top: -50px;
+  opacity: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 1px 5px 0 rgba(0, 0, 0, 0.22), 0 3px 1px -2px rgba(0, 0, 0, 0.3); }
+
+#modal-header {
+  position: relative;
+  background: #3498db;
+  padding: 15px;
+  text-align: center; }
+  #modal-header h2 {
+    color: #fff;
+    font-weight: normal; }
+
+#close-modal {
+  position: absolute;
+  color: #fff;
+  top: 5px;
+  right: 10px;
+  font-size: 25px; }
+
+#modal-content {
+  padding: 30px 15px;
+  text-align: center;
+  display: none; }
+  #modal-content p {
+    background: #bb6c6c;
+    max-width: 400px;
+    margin: 0 auto 10px auto;
+    padding: 10px;
+    color: #fff;
+    display: none; }
+
+#event-name-error.active, #event-date-error.active {
+  display: block; }
+
+.modal-field {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 400px;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid #b7b7b7; }
+  .modal-field:focus {
+    outline: none;
+    border-bottom: 2px solid #3498db; }
+
+#event-recurring {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 100%;
+  max-width: 400px;
+  border: none;
+  border-bottom: 2px solid #b7b7b7;
+  padding: 8px 0; }
+  #event-recurring:focus {
+    outline: none; }
+
+#modal-submit {
+  background: #3498db;
+  border: none;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 4px;
+  cursor: pointer; }
+  #modal-submit:hover {
+    background: #258cd1; }
+
+.pika-single.is-bound {
+  z-index: 999999; }
+
+/* --- Delete Counter ---- */
+#delete-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 50px 15px 15px 15px;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: -1; }
+  #delete-counter.active {
+    opacity: 1;
+    z-index: 99999; }
+    #delete-counter.active #delete-counter-modal {
+      top: 0;
+      opacity: 1; }
+
+#delete-counter-modal {
+  max-width: 350px;
+  background: #fff;
+  margin: 0 auto;
+  position: relative;
+  padding: 15px;
+  font-size: 16px;
+  top: -50px;
+  opacity: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 1px 5px 0 rgba(0, 0, 0, 0.22), 0 3px 1px -2px rgba(0, 0, 0, 0.3); }
+  #delete-counter-modal p {
+    margin: 0;
+    color: #61686e; }
+
+#delete-buttons {
+  margin-top: 30px;
+  text-align: right; }
+  #delete-buttons a {
+    display: inline-block;
+    text-decoration: none; }
+
+#delete-cancel {
+  margin-right: 5px;
+  border: 2px solid #98a1a9;
+  padding: 10px 25px;
+  background: #fff;
+  color: #98a1a9;
+  border-radius: 4px;
+  cursor: pointer; }
+  #delete-cancel:hover {
+    background: #98a1a9;
+    color: #fff; }
+
+#delete-confirm {
+  border: 2px solid #bd5252;
+  background: #bd5252;
+  color: #fff;
+  padding: 10px 50px;
+  border-radius: 4px;
+  cursor: pointer; }
+  #delete-confirm:hover {
+    border: 2px solid #b24444;
+    background: #b24444; }
+
+/* --- Settings --- */
+#settings-toggle {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: #217dbb;
+  font-size: 2em;
+  cursor: pointer; }
+  #settings-toggle:hover {
+    color: #fff; }
+  #settings-toggle.active {
+    color: #fff;
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg); }
+
+#settings {
+  display: none;
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  max-width: 200px;
+  width: 100%;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  text-align: center;
+  z-index: 999; }
+  #settings:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #fff; }
+  #settings.active {
+    display: block; }
+  #settings h2 {
+    margin: 0 0 5px 0;
+    font-size: 1.3em; }
+  #settings a {
+    display: inline-block;
+    text-decoration: none;
+    background: #3498db;
+    border: none;
+    color: #fff;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 4px; }
+    #settings a:hover {
+      background: #258cd1; }
+
+#setting-scheme h2, #setting-visible h2, #setting-fader h2, #setting-range h2 {
+  margin-top: 15px; }
+
+#chrome-extension-mastery {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+}
+
+#chrome-extension-mastery a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* --- Colour Schemes --- */
+.red {
+  background-color: #e74c3c; }
+  .red body {
+    background-color: #e74c3c; }
+  .red #add-counter-btn:hover, .red .counter-delete:hover, .red #undo-delete {
+    color: #e74c3c; }
+  .red .counter-edit {
+    background: #7b190f; }
+  .red #modal-header {
+    background: #e74c3c; }
+  .red .modal-field:focus {
+    border-bottom: 2px solid #e74c3c; }
+  .red #modal-submit {
+    background: #e74c3c; }
+    .red #modal-submit:hover {
+      background: #e43725; }
+  .red #settings-toggle {
+    color: #d62c1a; }
+    .red #settings-toggle:hover {
+      color: #fff; }
+  .red #settings a {
+    background: #e74c3c; }
+    .red #settings a:hover {
+      background: #e43725; }
+
+.green {
+  background-color: #2ecc71; }
+  .green body {
+    background-color: #2ecc71; }
+  .green #add-counter-btn:hover, .green .counter-delete:hover, .green #undo-delete {
+    color: #2ecc71; }
+  .green .counter-edit {
+    background: #124f2c; }
+  .green #modal-header {
+    background: #2ecc71; }
+  .green .modal-field:focus {
+    border-bottom: 2px solid #2ecc71; }
+  .green #modal-submit {
+    background: #2ecc71; }
+    .green #modal-submit:hover {
+      background: #29b765; }
+  .green #settings-toggle {
+    color: #25a25a; }
+    .green #settings-toggle:hover {
+      color: #fff; }
+  .green #settings a {
+    background: #2ecc71; }
+    .green #settings a:hover {
+      background: #29b765; }
+
+.yellow {
+  background-color: #f1c40f; }
+  .yellow body {
+    background-color: #f1c40f; }
+  .yellow #add-counter-btn:hover, .yellow .counter-delete:hover, .yellow #undo-delete {
+    color: #f1c40f; }
+  .yellow .counter-edit {
+    background: #614f06; }
+  .yellow #modal-header {
+    background: #f1c40f; }
+  .yellow .modal-field:focus {
+    border-bottom: 2px solid #f1c40f; }
+  .yellow #modal-submit {
+    background: #f1c40f; }
+    .yellow #modal-submit:hover {
+      background: #dab10d; }
+  .yellow #settings-toggle {
+    color: #c29d0b; }
+    .yellow #settings-toggle:hover {
+      color: #fff; }
+  .yellow #settings a {
+    background: #f1c40f; }
+    .yellow #settings a:hover {
+      background: #dab10d; }
+
+.orange {
+  background-color: #e67e22; }
+  .orange body {
+    background-color: #e67e22; }
+  .orange #add-counter-btn:hover, .orange .counter-delete:hover, .orange #undo-delete {
+    color: #e67e22; }
+  .orange .counter-edit {
+    background: #64350b; }
+  .orange #modal-header {
+    background: #e67e22; }
+  .orange .modal-field:focus {
+    border-bottom: 2px solid #e67e22; }
+  .orange #modal-submit {
+    background: #e67e22; }
+    .orange #modal-submit:hover {
+      background: #d67118; }
+  .orange #settings-toggle {
+    color: #bf6516; }
+    .orange #settings-toggle:hover {
+      color: #fff; }
+  .orange #settings a {
+    background: #e67e22; }
+    .orange #settings a:hover {
+      background: #d67118; }
+
+.turquoise {
+  background-color: #1abc9c; }
+  .turquoise body {
+    background-color: #1abc9c; }
+  .turquoise #add-counter-btn:hover, .turquoise .counter-delete:hover, .turquoise #undo-delete {
+    color: #1abc9c; }
+  .turquoise .counter-edit {
+    background: #07362c; }
+  .turquoise #modal-header {
+    background: #1abc9c; }
+  .turquoise .modal-field:focus {
+    border-bottom: 2px solid #1abc9c; }
+  .turquoise #modal-submit {
+    background: #1abc9c; }
+    .turquoise #modal-submit:hover {
+      background: #17a689; }
+  .turquoise #settings-toggle {
+    color: #148f77; }
+    .turquoise #settings-toggle:hover {
+      color: #fff; }
+  .turquoise #settings a {
+    background: #1abc9c; }
+    .turquoise #settings a:hover {
+      background: #17a689; }
+
+.pink {
+  background-color: #e91e63; }
+  .pink body {
+    background-color: #e91e63; }
+  .pink #add-counter-btn:hover, .pink .counter-delete:hover, .pink #undo-delete {
+    color: #e91e63; }
+  .pink .counter-edit {
+    background: #640a29; }
+  .pink #modal-header {
+    background: #e91e63; }
+  .pink .modal-field:focus {
+    border-bottom: 2px solid #e91e63; }
+  .pink #modal-submit {
+    background: #e91e63; }
+    .pink #modal-submit:hover {
+      background: #d81558; }
+  .pink #settings-toggle {
+    color: #c1134e; }
+    .pink #settings-toggle:hover {
+      color: #fff; }
+  .pink #settings a {
+    background: #e91e63; }
+    .pink #settings a:hover {
+      background: #d81558; }
+
+.purple {
+  background-color: #9b59b6; }
+  .purple body {
+    background-color: #9b59b6; }
+  .purple #add-counter-btn:hover, .purple .counter-delete:hover, .purple #undo-delete {
+    color: #9b59b6; }
+  .purple .counter-edit {
+    background: #452452; }
+  .purple #modal-header {
+    background: #9b59b6; }
+  .purple .modal-field:focus {
+    border-bottom: 2px solid #9b59b6; }
+  .purple #modal-submit {
+    background: #9b59b6; }
+    .purple #modal-submit:hover {
+      background: #8f4bab; }
+  .purple #settings-toggle {
+    color: #804399; }
+    .purple #settings-toggle:hover {
+      color: #fff; }
+  .purple #settings a {
+    background: #9b59b6; }
+    .purple #settings a:hover {
+      background: #8f4bab; }
+
+.dark {
+  background-color: #2c3e50; }
+  .dark body {
+    background-color: #2c3e50; }
+  .dark #add-counter-btn:hover, .dark .counter-delete:hover, .dark #undo-delete {
+    color: #2c3e50; }
+  .dark .counter-edit {
+    background: black; }
+  .dark #modal-header {
+    background: #2c3e50; }
+  .dark .modal-field:focus {
+    border-bottom: 2px solid #2c3e50; }
+  .dark #modal-submit {
+    background: #2c3e50; }
+    .dark #modal-submit:hover {
+      background: #233140; }
+  .dark #settings-toggle {
+    color: #1a252f; }
+    .dark #settings-toggle:hover {
+      color: #fff; }
+  .dark #settings a {
+    background: #2c3e50; }
+    .dark #settings a:hover {
+      background: #233140; }
+
+.light {
+  background-color: #ecf0f1; }
+  .light body {
+    background-color: #ecf0f1; }
+  .light #main-title h1 {
+    color: #616377; }
+  .light #main-title svg {
+    fill: #616377; }
+  .light #add-counter-btn {
+    color: #616377;
+    border: 3px solid #616377; }
+    .light #add-counter-btn:hover {
+      background: #616377;
+      color: #fff; }
+  .light .counter-delete:hover, .light #undo-delete {
+    color: #303244; }
+  .light .counter-edit {
+    background: #303244; }
+  .light #modal-header {
+    background: #303244; }
+  .light .modal-field:focus {
+    border-bottom: 2px solid #303244; }
+  .light #modal-submit {
+    background: #303244; }
+    .light #modal-submit:hover {
+      background: #252735; }
+  .light #settings-toggle {
+    color: #b4b6ca; }
+    .light #settings-toggle:hover {
+      color: black; }
+  .light #settings a {
+    background: #303244; }
+    .light #settings a:hover {
+      background: #252735; }
+
+/* --- Media Queries --- */
+@media screen and (max-width: 1000px) {
+  .counter {
+    width: 250px; } }
