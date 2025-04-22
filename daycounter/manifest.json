@@ -2,7 +2,7 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
   "manifest_version": 3,
-  "name": "Day Counter - New Tab Page",
+  "name": "Day Counter",
   "short_name": "Day Counter",
   "version": "3.1.0",
   "description": "Track days until or since life events like Birthdays easily.",
