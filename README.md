@@ -6,8 +6,8 @@ Day Counter
 
 <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/palette/macchiato.png" width="600px"/> <br>
 <div align="center">
-            <a href="https://zakventer.com/"><img src="https://img.shields.io/badge/JavaScript-stable-blue.svg?style=for-the-badge&labelColor=303446&logo=javascript&logoColor=white&color=f5a97f&logoColor=cad3f5"></a>
-            <a href="https://zakventer.com/"><img src="https://img.shields.io/badge/CSS-stable-blue.svg?style=for-the-badge&labelColor=303446&logo=css&logoColor=white&color=a6da95&logoColor=cad3f5"></a>
+            <a href="https://en.wikipedia.org/wiki/JavaScript/"><img src="https://img.shields.io/badge/JavaScript-stable-blue.svg?style=for-the-badge&labelColor=303446&logo=javascript&logoColor=white&color=f5a97f&logoColor=cad3f5"></a>
+            <a href="https://sass-lang.com/"><img src="https://img.shields.io/badge/SCSS-stable-blue.svg?style=for-the-badge&labelColor=303446&logo=sass&logoColor=white&color=a6da95&logoColor=cad3f5"></a>
 </div>
 </h1>
 
