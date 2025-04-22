@@ -18,11 +18,13 @@ Day Counter
 
 ## Installation
 > [!WARNING]
-> **Warning:** This extension has only been tested on Google Chrome. Other browsers which support this extension may or may not experience issues.
+> **Warning:** This extension has only been tested on Google Chrome. Other browsers which support this extension may experience compatibility issues.
 1. Download and extract this repository.
-2. Navigate to `chrome://extensions/`, enable **Developer Mode**, **Load unpacked** and select the daycounter folder.
-<img width="1800" alt="image" src="https://github.com/user-attachments/assets/7f03271b-6344-41bb-b976-84b4a32df843" />
-3. Launch a new tab and select 'Keep it' to save your settings.
+2. Navigate to `chrome://extensions`, enable Developer Mode, Load unpacked and select the daycounter folder.
+
+      <img width="1800" alt="image" src="https://github.com/user-attachments/assets/7f03271b-6344-41bb-b976-84b4a32df843" />
+
+4. Launch a new tab and select <b>Keep it</b> to save your settings.
 
 ## License
 This project falls under the MIT license.
