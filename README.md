@@ -19,6 +19,7 @@ Day Counter
 ## Installation
 > [!WARNING]
 > **Warning:** This extension has only been tested on Google Chrome. Other browsers which support this extension may experience compatibility issues.
+
 > [!NOTE]
 > **Note:** The extension is currently undergoing review in the Chrome Web Store. Once finished, I will provide a link to the extension instead.
 1. Download and extract this repository.
