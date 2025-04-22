@@ -24,7 +24,7 @@ Day Counter
 
       <img width="1800" alt="image" src="https://github.com/user-attachments/assets/7f03271b-6344-41bb-b976-84b4a32df843" />
 
-4. Launch a new tab and select <b>Keep it</b> to save your settings.
+4. Launch a new tab and select <b>Keep it</b> to save the extension.
 
 ## License
 This project falls under the MIT license.
