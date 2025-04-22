@@ -21,7 +21,7 @@ Day Counter
 > **Warning:** This extension has only been tested on Google Chrome. Other browsers which support this extension may experience compatibility issues.
 
 > [!NOTE]
-> **Note:** The extension is currently undergoing review in the Chrome Web Store. Once finished, I will provide a link to the extension instead.
+> **Note:** The extension is currently undergoing review in the Chrome Web Store. Once finished, a link to the extension will be provided.
 1. Download and extract this repository.
 2. Navigate to `chrome://extensions`, enable Developer Mode, Load unpacked and select the daycounter folder.
 
