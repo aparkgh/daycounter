@@ -21,7 +21,7 @@ Day Counter
 > **Warning:** This extension has only been tested on Google Chrome. Other browsers which support this extension may or may not experience issues.
 1. Download and extract this repository.
 2. Navigate to `chrome://extensions/`, enable **Developer Mode**, **Load unpacked** and select the daycounter folder.
-<img width="1800" alt="image" src="https://github.com/user-attachments/assets/ae3553aa-4d7f-4fcf-aa37-bbed450209b7">
+<img width="1800" alt="image" src="https://github.com/user-attachments/assets/7f03271b-6344-41bb-b976-84b4a32df843" />
 3. Launch a new tab and select 'Keep it' to save your settings.
 
 ## License
