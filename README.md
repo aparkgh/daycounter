@@ -17,13 +17,15 @@ Day Counter
 **Day Counter** is a minimal and customizable Chrome extension that turns your new tab page into a productivity dashboard. Add day counters to track deadlines, events, or goals — all from a beautifully simple interface.
 
 ## Installation
+
 > [!WARNING]
 > **Warning:** This extension has only been tested on Google Chrome. Other browsers which support this extension may experience compatibility issues.
 
-> [!NOTE]
-> **Note:** The extension is currently undergoing review in the Chrome Web Store. Once finished, a link to the extension will be provided.
+* Search for [Day Counter](https://chromewebstore.google.com/detail/nedanpbgcaailcahdjmldfalbnpeccpo?utm_source=item-share-cb) on the Chrome Web Store and select **Add to Chrome** to add the extension.
+
+Alternatively,
 1. Download and extract this repository.
-2. Navigate to `chrome://extensions`, enable Developer Mode, Load unpacked and select the daycounter folder.
+2. Navigate to `chrome://extensions`, enable Developer Mode, and load the unpacked extension (daycounter folder).
 
       <img width="1800" alt="image" src="https://github.com/user-attachments/assets/7f03271b-6344-41bb-b976-84b4a32df843" />
 
