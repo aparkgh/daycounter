@@ -25,11 +25,13 @@ Day Counter
 
 Alternatively,
 1. Download and extract this repository.
-2. Navigate to `chrome://extensions`, enable Developer Mode, and load the unpacked extension (daycounter folder).
+2. Navigate to `chrome://extensions`, enable Developer Mode, and load the unpacked (daycounter folder) extension.
 
       <img width="1800" alt="image" src="https://github.com/user-attachments/assets/7f03271b-6344-41bb-b976-84b4a32df843" />
 
-4. Launch a new tab and select <b>Keep it</b> to save the extension.
+---
+
+That's it! Launch a new tab and select <b>Keep it</b> to save the extension.
 
 ## License
 This project falls under the MIT license.
