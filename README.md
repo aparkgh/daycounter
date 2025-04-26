@@ -29,8 +29,6 @@ Alternatively,
 
       <img width="1800" alt="image" src="https://github.com/user-attachments/assets/7f03271b-6344-41bb-b976-84b4a32df843" />
 
----
-
 That's it! Launch a new tab and select <b>Keep it</b> to save the extension.
 
 ## License
