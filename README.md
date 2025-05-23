@@ -31,5 +31,10 @@ Alternatively,
 
 That's it! Launch a new tab and select <b>Keep it</b> to save the extension.
 
+## Features
+- Create counters for any date type — one-time events, bi-weekly routines, annual milestones, and more.
+- Personalize your experience with customizable themes, counter sizes, and a variety of additional settings.
+- Seamless integration with your Google account for effortless syncing across all your devices.
+
 ## License
 This project falls under the MIT license.
